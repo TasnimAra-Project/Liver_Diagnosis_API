@@ -31,3 +31,7 @@ def predict_disease(data: PatientData):
         "prediction": int(prediction),
         "probability_of_disease": round(probability, 4)
     }
+@app.get("/")
+def root():
+    return {"message": "Liver Diagnosis API is running"}
+
